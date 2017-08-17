@@ -1,6 +1,6 @@
 #include <BME280I2C.h>
 #include <Wire.h>             
- float temp, hum, pres;
+ float temperature, humidity, pressure;
 BME280I2C bme;                 
 
 
@@ -15,17 +15,17 @@ void loop() {
 
  
                                            
-   bme.read(pres, temp, hum);   
+   bme.read(pressure, temperature,humidity);   
    
 
   Serial.print("Temp: ");
-  Serial.print(temp);
+  Serial.print(temperature);
   Serial.print("C");
   Serial.print("\t\tHumidity: ");
-  Serial.print(hum);
+  Serial.print(humidity);
   Serial.print("% RH");
   Serial.print("\t\tPressure: ");
-  Serial.print(pres);
+  Serial.print(pressure);
   Serial.println("Bar");
   delay(1000);
 }
